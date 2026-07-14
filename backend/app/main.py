@@ -3,6 +3,7 @@ from app.api.routes.database import router as database_router
 from app.api.routes.health import router as health_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.project import router as project_router
+from app.api.routes.blueprint import router as blueprint_router
 app = FastAPI(
     title="BlueprintAI API",
     description="AI-powered software architect backend",
@@ -13,6 +14,7 @@ app.include_router(health_router)
 app.include_router(database_router)
 app.include_router(auth_router)
 app.include_router(project_router)
+app.include_router(blueprint_router)
 
 
 @app.get("/")

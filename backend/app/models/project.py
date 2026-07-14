@@ -18,7 +18,7 @@ class Project(Base):
         default=uuid.uuid4,
     )
 
-    name: Mapped[str] = mapped_column(
+    title: Mapped[str] = mapped_column(
         String(255),
         nullable=False,
     )

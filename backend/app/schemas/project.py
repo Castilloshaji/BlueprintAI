@@ -5,19 +5,19 @@ from pydantic import BaseModel, ConfigDict
 
 
 class ProjectCreate(BaseModel):
-    name: str
+    title: str
     description: str | None = None
 
 
 class ProjectUpdate(BaseModel):
-    name: str | None = None
+    title: str | None = None
     description: str | None = None
     status: str | None = None
 
 
 class ProjectResponse(BaseModel):
     id: UUID
-    name: str
+    title: str
     description: str | None
     status: str
     owner_id: UUID

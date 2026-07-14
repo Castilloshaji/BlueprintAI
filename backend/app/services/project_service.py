@@ -18,7 +18,7 @@ class ProjectService:
     ) -> Project:
 
         project = Project(
-            name=project_data.name,
+            title=project_data.title,
             description=project_data.description,
             owner_id=current_user.id,
         )

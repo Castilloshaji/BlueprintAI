@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     algorithm: str
     access_token_expire_minutes: int
 
+    # AI
+    groq_api_key: str
+
     model_config = SettingsConfigDict(
         env_file=".env",
         case_sensitive=False,

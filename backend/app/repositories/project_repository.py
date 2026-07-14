@@ -63,5 +63,20 @@ class ProjectRepository:
         db.delete(project)
         db.commit()
 
+    def get_by_id_and_owner(
+        self,
+        db: Session,
+        project_id: UUID,
+        owner_id: UUID,
+    ) -> Project | None:
+
+        return (
+            db.query(Project)
+            .filter_by(
+            id=project_id,
+            owner_id=owner_id,
+        )
+        .first()
+    )
 
 project_repository = ProjectRepository()
